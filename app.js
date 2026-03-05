@@ -1,46 +1,24 @@
-const form = document.getElementById("taskForm");
-const input = document.getElementById("taskInput");
-const list = document.getElementById("taskList");
-
-let tasks = [];
-
-form.addEventListener("submit", function(e) {
-
-e.preventDefault();
-
-const taskText = input.value.trim();
-
-if(taskText === "") return;
-
-addTask(taskText);
-
-input.value = "";
-
-saveTasks();
-
-});
-
-function addTask(text) {
+function addTask(text){
 
 const li = document.createElement("li");
-li.classList.add("task");
 
-li.textContent = text;
+li.className =
+"flex justify-between items-center p-3 bg-white dark:bg-gray-800 rounded shadow";
 
-const deleteBtn = document.createElement("button");
-deleteBtn.textContent = "❌";
+li.innerHTML = `
+<span>${text}</span>
+<button class="text-red-500 hover:text-red-700">✖</button>
+`;
 
-deleteBtn.addEventListener("click", function() {
+const deleteBtn = li.querySelector("button");
+
+deleteBtn.addEventListener("click", () => {
 
 li.remove();
-
 tasks = tasks.filter(task => task !== text);
-
 saveTasks();
 
 });
-
-li.appendChild(deleteBtn);
 
 list.appendChild(li);
 
@@ -48,25 +26,10 @@ tasks.push(text);
 
 }
 
-function saveTasks() {
+const toggle = document.getElementById("themeToggle");
 
-localStorage.setItem("tasks", JSON.stringify(tasks));
+toggle.addEventListener("click", () => {
 
-}
+document.documentElement.classList.toggle("dark");
 
-function loadTasks() {
-
-const storedTasks = localStorage.getItem("tasks");
-
-if(storedTasks) {
-
-tasks = JSON.parse(storedTasks);
-
-tasks.forEach(task => addTask(task));
-
-}
-
-}
-
-loadTasks();
-
+});

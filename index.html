@@ -1,52 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="transition-colors duration-300">
 <head>
-  <meta charset="UTF-8">
-  <title>Taskflow App</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>Taskflow</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
 
-  <header>
-    <h1>Taskflow</h1>
-  </header>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen">
 
-  <div class="container">
-    
-    <aside>
-      <h3>Categorías</h3>
-      <ul>
-        <li>Trabajo</li>
-        <li>Personal</li>
-        <li>Urgente</li>
-      </ul>
-    </aside>
+<header class="p-6 bg-white dark:bg-gray-800 shadow flex justify-between items-center">
 
-    <main>
-      <section class="task-list">
-        
-        <article class="task high">
-          <span class="title">Diseñar landing page</span>
-          <span class="category">Trabajo</span>
-          <span class="badge">Alta</span>
-        </article>
+<h1 class="text-2xl font-bold">Taskflow</h1>
 
-        <article class="task medium">
-          <span class="title">Comprar materiales</span>
-          <span class="category">Personal</span>
-          <span class="badge">Media</span>
-        </article>
+<button id="themeToggle"
+class="px-3 py-2 rounded bg-gray-200 dark:bg-gray-700">
+🌙
+</button>
 
-        <article class="task low">
-          <span class="title">Leer documentación</span>
-          <span class="category">Estudio</span>
-          <span class="badge">Baja</span>
-        </article>
+</header>
 
-      </section>
-    </main>
+<main class="max-w-2xl mx-auto p-6">
 
-  </div>
+<form id="taskForm" class="flex gap-2 mb-6">
+
+<input
+id="taskInput"
+type="text"
+placeholder="Nueva tarea..."
+class="flex-1 p-2 border rounded dark:bg-gray-800"
+/>
+
+<button
+class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+Añadir
+</button>
+
+</form>
+
+<ul id="taskList" class="space-y-2"></ul>
+
+</main>
+
+<script src="app.js"></script>
 
 </body>
 </html>
