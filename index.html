@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
-<title>TaskFlow</title>
+<title>TaskFlow Project</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-  <h1>TASKFLOW</h1>
+  <h1>TASKFLOW PROJECT</h1>
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#servicios">Funciones</a>
@@ -23,8 +23,8 @@
 <!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-content">
-    <h2>Organiza tu día de forma simple y eficiente</h2>
-    <p>TaskFlow te permite gestionar tus tareas de manera clara, rápida y sin distracciones. Añade, busca y controla todo tu trabajo desde un solo lugar.</p>
+    <h2>Gestiona tus tareas de forma eficiente</h2>
+    <p> Añade, busca y controla todo tu trabajo desde un solo lugar.</p>
     <a href="#tareas" class="btn">Empezar ahora</a>
   </div>
 </section>
@@ -36,22 +36,22 @@
     <div class="card">
       <span class="card-icon">✅</span>
       <h3>Gestión de tareas</h3>
-      <p>Crea, organiza y elimina tareas fácilmente para mantener el control de tu día.</p>
+      <p>Crea, organiza y elimina tareas fácilmente.</p>
     </div>
     <div class="card">
       <span class="card-icon">🔍</span>
       <h3>Búsqueda rápida</h3>
-      <p>Encuentra cualquier tarea al instante usando el buscador integrado.</p>
+      <p>Encuentra cualquier tarea.</p>
     </div>
     <div class="card">
       <span class="card-icon">💾</span>
       <h3>Guardado automático</h3>
-      <p>Tus tareas se guardan automáticamente para que nunca pierdas tu progreso.</p>
+      <p>Tareas guardadas.</p>
     </div>
     <div class="card">
       <span class="card-icon">🏷️</span>
       <h3>Prioridades y categorías</h3>
-      <p>Clasifica tus tareas por prioridad y categoría para organizarte mejor.</p>
+      <p>Clasifica tus tareas por prioridad y categoría.</p>
     </div>
   </div>
 </section>
@@ -65,10 +65,10 @@
     <aside class="sidebar" id="sidebar">
       <h3>Categorías</h3>
       <ul>
-        <li onclick="filterCategory('all')" class="active-cat">📋 Todas</li>
-        <li onclick="filterCategory('trabajo')">💼 Trabajo</li>
-        <li onclick="filterCategory('personal')">👤 Personal</li>
-        <li onclick="filterCategory('estudio')">📚 Estudio</li>
+        <li onclick="filterCategory('all')" class="active-cat">Todas</li>
+        <li onclick="filterCategory('trabajo')">Trabajo</li>
+        <li onclick="filterCategory('personal')">Personal</li>
+        <li onclick="filterCategory('estudio')">Estudio</li>
       </ul>
 
       <h3>Filtrar por estado</h3>
@@ -80,19 +80,19 @@
 
       <h3>Ordenar</h3>
       <ul>
-        <li onclick="sortByPriority()">⬆ Por prioridad</li>
-        <li onclick="sortByDate()">📅 Por fecha</li>
+        <li onclick="sortByPriority()">Por prioridad</li>
+        <li onclick="sortByDate()">Por fecha</li>
       </ul>
 
       <h3>Acciones</h3>
-      <button class="sidebar-btn" onclick="completeAll()">✔ Completar todas</button>
-      <button class="sidebar-btn danger" onclick="deleteCompleted()">🗑 Eliminar completadas</button>
+      <button class="sidebar-btn" onclick="completeAll()">Completar todas</button>
+      <button class="sidebar-btn danger" onclick="deleteCompleted()">Eliminar completadas</button>
     </aside>
 
     <!-- MAIN -->
     <div class="main">
 
-      <button id="menu-toggle">☰ Menú</button>
+      <button id="menu-toggle">Menú</button>
 
       <h2 class="section-title">Gestor de tareas</h2>
 
@@ -109,16 +109,16 @@
             <option value="high">🔴 Alta</option>
           </select>
           <select id="task-category">
-            <option value="trabajo">💼 Trabajo</option>
-            <option value="personal">👤 Personal</option>
-            <option value="estudio">📚 Estudio</option>
+            <option value="trabajo">Trabajo</option>
+            <option value="personal">Personal</option>
+            <option value="estudio">Estudio</option>
           </select>
           <button type="submit" class="btn">Añadir tarea</button>
         </div>
       </form>
 
       <!-- SEARCH -->
-      <input type="text" id="search-input" placeholder="🔍 Buscar tarea...">
+      <input type="text" id="search-input" placeholder="Buscar tarea...">
 
       <!-- EMPTY STATE -->
       <p id="empty-message" class="empty-message">No hay tareas aún. ¡Añade una para empezar!</p>
